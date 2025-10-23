@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Бронирование — Индекс Драйв</title>
+  <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html" aria-label="На главную">
+        <img src="/logo.png" alt="Индекс Драйв" />
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="branches.html">Филиалы</a>
+      <a href="car-select.html">Выбор авто</a>
+      <a href="booking.html">Бронирование</a>
+    </nav>
+    <div class="auth-links">
+      <a href="login.html" class="btn btn-outline">Войти</a>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="card booking-form-card">
+      <h2>Оформление бронирования</h2>
+
+      <h3 class="booking-section-title car-data-title">Данные автомобиля</h3>
+      <div class="car-info-box">
+        <p><strong>ID:</strong> A-789</p>
+        <p><strong>Марка:</strong> Toyota</p>
+        <p><strong>Модель:</strong> Camry</p>
+        <p><strong>Номер:</strong> А123ВС</p>
+        <p><strong>Филиал:</strong> Центральный</p>
+        <p><strong>Стоимость/день:</strong> 2 500 ₽</p>
+      </div>
+
+      <div class="date-picker-row">
+        <div class="form-group">
+          <label>Дата выдачи</label>
+          <input type="date" required />
+        </div>
+        <div class="form-group">
+          <label>Дата возврата</label>
+          <input type="date" required />
+        </div>
+      </div>
+
+      <h3 class="booking-section-title client-data-title">Данные клиента</h3>
+      <div class="client-data-row">
+        <div class="form-group">
+          <label>ФИО</label>
+          <input type="text" value="Копылов Кирилл Максимович>
+        </div>
+        <div class="form-group">
+          <label>Паспорт</label>
+          <input type="text" value="1234 567890" readonly />
+        </div>
+        <div class="form-group">
+          <label>Телефон</label>
+          <input type="tel" value="+79991234567" readonly />
+        </div>
+        <div class="form-group">
+          <label>Карта</label>
+          <input type="text" value="**** **** **** 1234" readonly />
+        </div>
+      </div>
+
+      <div class="booking-summary-card">
+        <p>✅ При аренде от 3 дней — скидка 5%. Максимум 25%.</p>
+        <p class="booking-total">
+          Итого: <span>7 125 ₽</span> (3 дня, скидка 5%)
+        </p>
+      </div>
+
+      <div class="booking-actions">
+        <button class="btn btn-secondary">Изменить тариф</button>
+        <button class="btn btn-primary">Оформить бронирование</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

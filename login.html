@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Вход — Индекс Драйв</title>
+  <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+
+  <!-- ЕДИНЫЙ ХЕДЕР -->
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html" aria-label="На главную">
+        <img src="/logo.png" alt="Индекс Драйв" />
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="branches.html">Филиалы</a>
+      <a href="car-select.html">Выбор авто</a>
+      <a href="booking.html">Бронирование</a>
+    </nav>
+    <div class="auth-links">
+      <a href="login.html" class="btn btn-outline">Войти</a>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="card login-card">
+      <h2 class="login-title">Вход в аккаунт</h2>
+      <form class="login-form">
+        <div class="form-group">
+          <label>Телефон</label>
+          <input type="tel" placeholder="+7 (999) 123-45-67" required />
+        </div>
+        <div class="form-group">
+          <label>Пароль</label>
+          <input type="password" required />
+        </div>
+        <button type="submit" class="btn btn-primary login-submit">Войти</button>
+      </form>
+      <div class="login-footer">
+        Нет аккаунта? <a href="register.html" class="login-link">Зарегистрироваться</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

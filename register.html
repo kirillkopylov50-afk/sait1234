@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Регистрация — Индекс Драйв</title>
+  <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+
+<!-- ЕДИНЫЙ ХЕДЕР -->
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html" aria-label="На главную">
+        <img src="/logo.png" alt="Индекс Драйв" />
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="branches.html">Филиалы</a>
+      <a href="car-select.html">Выбор авто</a>
+      <a href="booking.html">Бронирование</a>
+    </nav>
+    <div class="auth-links">
+      <a href="login.html" class="btn btn-outline">Войти</a>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="card register-card">
+      <h2 class="register-title">Регистрация</h2>
+      <form class="register-form">
+        <div class="register-name-row">
+          <div class="form-group">
+            <label>Фамилия</label>
+            <input type="text" required />
+          </div>
+          <div class="form-group">
+            <label>Имя</label>
+            <input type="text" required />
+          </div>
+          <div class="form-group">
+            <label>Отчество</label>
+            <input type="text" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Паспорт (серия и номер)</label>
+          <input type="text" placeholder="1234 567890" required />
+        </div>
+
+        <div class="form-group">
+          <label>Телефон</label>
+          <input type="tel" placeholder="+7 (999) 123-45-67" required />
+        </div>
+
+        <div class="form-group">
+          <label>Дата рождения</label>
+          <input type="date" required />
+        </div>
+
+        <div class="register-password-row">
+          <div class="form-group">
+            <label>Пароль</label>
+            <input type="password" required minlength="6" />
+          </div>
+          <div class="form-group">
+            <label>Повтор пароля</label>
+            <input type="password" required minlength="6" />
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary register-submit">Зарегистрироваться</button>
+      </form>
+
+      <div class="register-footer">
+        Уже есть аккаунт?&nbsp;
+        <a href="login.html" class="register-link">Войти</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Филиалы — Индекс Драйв</title>
+  <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html" aria-label="На главную">
+        <img src="/logo.png" alt="Индекс Драйв" />
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="branches.html">Филиалы</a>
+      <a href="car-select.html">Выбор авто</a>
+      <a href="booking.html">Бронирование</a>
+    </nav>
+    <div class="auth-links">
+      <a href="login.html" class="btn btn-outline">Войти</a>
+    </div>
+  </div>
+</header>
+
+<!-- Блок с картой -->
+<section class="map-section">
+  <div class="container">
+    <div class="card map-card">
+      <h2 class="map-title">Карта филиалов</h2>
+      <img src="/karta.png" alt="Карта с расположением филиалов Индекс Драйв" class="map-image">
+    </div>
+  </div>
+</section>
+
+<!-- Список филиалов -->
+<div class="container">
+  <div class="card branches-card">
+    <h2>Наши филиалы</h2>
+    <p class="branches-description">В городе 5 филиалов. Нажмите на филиал, чтобы увидеть доступные автомобили.</p>
+
+    <div class="branches-grid">
+      <div class="branch-card" onclick="toggleCars(1)">
+        <h3>📍 Центральный филиал</h3>
+        <p>ул. Ленина, 10</p>
+        <div id="cars-1" class="branch-cars hidden">
+          <p><strong>Доступные авто:</strong></p>
+          <ul class="branch-cars-list">
+            <li>Toyota Camry — Эконом</li>
+            <li>Honda Civic — Эконом</li>
+            <li>BMW X5 — Премиум</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="branch-card" onclick="toggleCars(2)">
+        <h3>📍 Северный филиал</h3>
+        <p>пр. Победы, 45</p>
+        <div id="cars-2" class="branch-cars hidden">
+          <p><strong>Доступные авто:</strong></p>
+          <ul class="branch-cars-list">
+            <li>Kia Rio — Эконом</li>
+            <li>Hyundai Solaris — Эконом</li>
+            <li>Audi A6 — Премиум</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Добавьте остальные 3 по аналогии -->
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleCars(id) {
+    const el = document.getElementById(`cars-${id}`);
+    el.classList.toggle('hidden');
+  }
+</script>
+
+</body>
+</html>

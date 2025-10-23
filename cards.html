@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Банковские карты — Индекс Драйв</title>
+  <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html" aria-label="На главную">
+        <img src="/logo.png" alt="Индекс Драйв" />
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="branches.html">Филиалы</a>
+      <a href="car-select.html">Выбор авто</a>
+      <a href="booking.html">Бронирование</a>
+    </nav>
+    <div class="auth-links">
+      <a href="login.html" class="btn btn-outline">Войти</a>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="card cards-page">
+      <h2>Мои банковские карты</h2>
+
+      <!-- Карта 1 -->
+      <div class="card-item visa-card">
+        <div class="card-info">
+          <img src="/visa.png" alt="Visa" class="card-logo" />
+          <div>
+            <p><strong>**** **** **** 1234</strong></p>
+            <p>Visa • Активна</p>
+          </div>
+        </div>
+        <button class="btn btn-outline delete-btn delete-btn--red">Удалить</button>
+      </div>
+
+      <!-- Карта 2 -->
+      <div class="card-item mastercard-card">
+        <div class="card-info">
+          <img src="/master.png" alt="MasterCard" class="card-logo" />
+          <div>
+            <p><strong>**** **** **** 5678</strong></p>
+            <p>MasterCard • Активна</p>
+          </div>
+        </div>
+        <button class="btn btn-outline delete-btn delete-btn--blue">Удалить</button>
+      </div>
+
+      <!-- Карта 3 -->
+      <div class="card-item mir-card">
+        <div class="card-info">
+          <img src="/mir.png" alt="Мир" class="card-logo" />
+          <div>
+            <p><strong>**** **** **** 9012</strong></p>
+            <p>Мир • Закончился срок</p>
+          </div>
+        </div>
+        <button class="btn btn-outline delete-btn delete-btn--gray">Удалить</button>
+      </div>
+
+      <button class="btn btn-primary add-card-btn" onclick="document.getElementById('modal').classList.add('active');">
+        Добавить карту
+      </button>
+    </div>
+  </div>
+
+  <!-- Модальное окно добавления карты -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3>Добавить банковскую карту</h3>
+      <form class="add-card-form">
+        <div class="form-group">
+          <label>Номер карты (16 цифр, разделённых пробелом)</label>
+          <input type="text" placeholder="1111 2222 3333 4444" maxlength="19" id="cardNumber" oninput="updateCardType()" />
+        </div>
+        <div class="form-group">
+          <label>Имя и фамилия (латиницей)</label>
+          <input type="text" placeholder="IVAN IVANOV" />
+        </div>
+        <div class="card-expiry-cvv-row">
+          <div class="form-group">
+            <label>Срок действия (ММ/ГГ)</label>
+            <input type="text" placeholder="12/28" />
+          </div>
+          <div class="form-group">
+            <label>CVV/CVC</label>
+            <input type="password" placeholder="123" maxlength="3" />
+          </div>
+        </div>
+        <div class="card-logo-preview">
+          <img id="cardLogo" src="" alt="Тип карты" class="card-type-logo" />
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-outline" onclick="document.getElementById('modal').classList.remove('active');">
+            Отмена
+          </button>
+          <button type="button" class="btn btn-primary" onclick="addCard()">
+            Добавить
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
